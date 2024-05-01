@@ -22,7 +22,9 @@ dnf -y install gcc-c++
 # testing
 pip3 install pytesseract==0.3.10 tesserocr==2.7.0
 # deep learning
-pip3 install torch==1.8.1 torchvision==0.9.1
+pip3 install torch==2.2.0 torchvision==0.9.1
+# testing
+pip3 install pytesseract==0.3.10 tesserocr==0.14.0
 # screen controlling
 if (( distro_version <= 32 )); then
     pip3 install autopy==4.0.0
