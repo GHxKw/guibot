@@ -15,6 +15,8 @@ dnf -y install gcc libX11-devel libXtst-devel python3-devel libpng-devel python3
 pip3 install --upgrade pip
 # contour, template, feature, cascade, text matching
 dnf -y install python3-numpy python3-opencv
+# check opencv versions
+dnf search opencv
 # text matching
 dnf -y install tesseract tesseract-devel
 dnf -y install gcc-c++
