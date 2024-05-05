@@ -9,7 +9,7 @@ readonly distro_root="${ROOT:-$HOME}"
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 # python3
-apt-get -y install python3-requests python3-coverage
+apt-get -y install python3 python3-coverage
 # python-imaging
 apt-get -y install python3-pil
 # pip dependencies (for dependencies not available as DEB)
