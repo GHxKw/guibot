@@ -38,6 +38,7 @@ fi
 # pip3 install torch==1.8.1 torchvision==0.9.1
 pip3 install torch==2.2.0 torchvision==0.17.0
 # screen controlling
+pip3 install setuptools-rust
 pip3 install autopy==4.0.0
 pip3 install vncdotool==0.12.0
 apt-get -y install xdotool x11-apps imagemagick
