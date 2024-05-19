@@ -26,6 +26,7 @@ if [[ $distro_version == "xenial" ]]; then
 else
     apt-get -y install python3-opencv
 fi
+python3 -m pip cache purge
 # text matching
 if [[ $distro_version == "xenial" ]]; then
     export DISABLE_OCR=1
