@@ -19,6 +19,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip3 install --upgrade pip
 pip3 install setuptools-rust
+pip show setuptools-rust
 # contour, template, feature, cascade, text matching
 apt-get -y install python3-numpy
 if [[ $distro_version == "xenial" ]]; then
