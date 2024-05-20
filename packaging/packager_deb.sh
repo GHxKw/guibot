@@ -28,10 +28,12 @@ if [[ $distro_version == "xenial" ]]; then
 else
     apt-get -y install tesseract-ocr libtesseract-dev
     apt-get -y install g++ pkg-config
-    pip3 install pytesseract==0.3.4 tesserocr==2.5.1
+    # pip3 install pytesseract==0.3.4 tesserocr==2.5.1
+    pip3 install pytesseract==0.3.10 tesserocr==2.7.0
 fi
 # deep learning
-pip3 install torch==1.8.1 torchvision==0.9.1
+# pip3 install torch==1.8.1 torchvision==0.9.1
+pip3 install torch==2.2.0 torchvision==0.17.0
 # screen controlling
 pip3 install autopy==4.0.0
 pip3 install vncdotool==0.12.0
