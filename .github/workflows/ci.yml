@@ -24,7 +24,7 @@ jobs:
         - python-version: 3.12
           install_variant: "rpm.fedora.40"
         - python-version: 3.12
-          install_variant: "deb.ubuntu.noble"
+          install_variant: "deb.ubuntu.jammy"
       fail-fast: false
 
     steps:
