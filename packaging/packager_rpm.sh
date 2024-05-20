@@ -29,6 +29,7 @@ pip3 install pytesseract==0.3.10 tesserocr==2.7.0
 pip3 install torch==2.2.0 torchvision==0.17.0
 # screen controlling
 if (( distro_version <= 32 )); then
+    pip3 install setuptools-rust
     pip3 install autopy==4.0.0
 else
     export DISABLE_AUTOPY=1
@@ -61,6 +62,11 @@ Xvfb :99 -screen 0 1024x768x24 &> /tmp/xvfb.log  &
 touch /root/.Xauthority
 xauth add ${HOST}:99 . $(xxd -l 16 -p /dev/urandom)
 sleep 3  # give xvfb some time to start
+
+# Set environment variables to handle Vulkan/MESA issues
+export MESA_LOADER_DRIVER_OVERRIDE=zink
+export MESA_VK_ABORT_ON_DEVICE_LOSS=1
+export LIBGL_ALWAYS_SOFTWARE=1
 
 # unit tests
 dnf install -y python3-PyQt5
