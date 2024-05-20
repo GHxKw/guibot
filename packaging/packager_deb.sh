@@ -13,14 +13,8 @@ apt-get -y install python3 python3-coverage
 # python-imaging
 apt-get -y install python3-pil
 # pip dependencies (for dependencies not available as DEB)
-apt-get -y install gcc libx11-dev libxtst-dev python3-dev libpng-dev python3-pip 
-apt-get -y install python3.12-venv
-python3 -m venv .venv
-source .venv/bin/activate
+apt-get -y install gcc libx11-dev libxtst-dev python3-dev libpng-dev python3-pip
 pip3 install --upgrade pip
-pip3 install setuptools-rust
-echo check
-pip show setuptools-rust
 # contour, template, feature, cascade, text matching
 apt-get -y install python3-numpy
 if [[ $distro_version == "xenial" ]]; then
@@ -28,19 +22,16 @@ if [[ $distro_version == "xenial" ]]; then
 else
     apt-get -y install python3-opencv
 fi
-python3 -m pip cache purge
 # text matching
 if [[ $distro_version == "xenial" ]]; then
     export DISABLE_OCR=1
 else
     apt-get -y install tesseract-ocr libtesseract-dev
     apt-get -y install g++ pkg-config
-    # pip3 install pytesseract==0.3.4 tesserocr==2.5.1
-    pip3 install pytesseract==0.3.10 tesserocr==2.7.0
+    pip3 install pytesseract==0.3.4 tesserocr==2.5.1
 fi
 # deep learning
-# pip3 install torch==1.8.1 torchvision==0.9.1
-pip3 install torch==2.2.0 torchvision==0.17.0
+pip3 install torch==1.8.1 torchvision==0.9.1
 # screen controlling
 pip3 install autopy==4.0.0
 pip3 install vncdotool==0.12.0
