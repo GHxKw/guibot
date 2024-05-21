@@ -16,12 +16,11 @@ apt-get -y install python3 python3-coverage
 apt-get -y install python3-pil
 # pip dependencies (for dependencies not available as DEB)
 apt-get -y install gcc libx11-dev libxtst-dev python3-dev libpng-dev python3-pip
+apt-get -y install python3.12-venv
 pip3 install --upgrade pip
-# # Install Rust
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-# source $HOME/.cargo/env
-# pip3 install setuptools-rust
-# contour, template, feature, cascade, text matching
+python3 -m venv myenv
+source myenv/bin/activate
+pip install <package_name>
 apt-get -y install python3-numpy
 if [[ $distro_version == "xenial" ]]; then
     export DISABLE_OPENCV=1
