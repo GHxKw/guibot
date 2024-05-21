@@ -17,10 +17,9 @@ apt-get -y install python3-pil
 # pip dependencies (for dependencies not available as DEB)
 apt-get -y install gcc libx11-dev libxtst-dev python3-dev libpng-dev python3-pip
 apt-get -y install python3.12-venv
+python3 -m venv .venv
+source .venv/bin/activate
 pip3 install --upgrade pip
-python3 -m venv myenv
-source myenv/bin/activate
-pip install <package_name>
 apt-get -y install python3-numpy
 if [[ $distro_version == "xenial" ]]; then
     export DISABLE_OPENCV=1
