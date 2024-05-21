@@ -23,8 +23,8 @@ jobs:
         include:
         - python-version: 3.12
           install_variant: "rpm.fedora.40"
-        - python-version: 3.10
-          install_variant: "deb.ubuntu.jammy"
+        - python-version: 3.12
+          install_variant: "deb.ubuntu.noble"
       fail-fast: false
 
     steps:
