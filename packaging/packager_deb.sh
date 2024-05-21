@@ -8,6 +8,8 @@ readonly distro_root="${ROOT:-$HOME}"
 # deb dependencies
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
+# Install curl
+apt-get -y install curl
 # python3
 apt-get -y install python3 python3-coverage
 # python-imaging
