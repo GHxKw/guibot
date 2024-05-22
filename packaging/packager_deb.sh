@@ -35,10 +35,13 @@ else
     apt-get -y install g++ pkg-config
     # pip3 install pytesseract==0.3.4 tesserocr==2.5.1
     pip3 install pytesseract==0.3.10 tesserocr==2.7.0
+    echo check
+    pip3 show torcpytesseracth tesserocr
 fi
 # deep learning
 # pip3 install torch==1.8.1 torchvision==0.9.1
 pip3 install torch==2.2.0 torchvision==0.17.0
+pip3 show torch torchvision
 # screen controlling
 # pip3 install autopy==4.0.0
 export DISABLE_AUTOPY=1
@@ -48,6 +51,8 @@ apt-get -y install python3-tk scrot
 # TODO: install PyScreeze separately to replace the one PyAutoGUI will install which is incompatible with the current Pillow version 
 pip3 install pyscreeze==0.1.28
 pip3 install pyautogui==0.9.53
+echo check
+pip3 show pyautogui
 apt-get -y install x11vnc
 
 # deb packaging and installing of current guibot source
