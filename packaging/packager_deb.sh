@@ -20,6 +20,7 @@ apt-get -y install python3.12-venv
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install --upgrade pip
+pip3 install setuptools-rust
 apt-get -y install python3-numpy
 if [[ $distro_version == "xenial" ]]; then
     export DISABLE_OPENCV=1
