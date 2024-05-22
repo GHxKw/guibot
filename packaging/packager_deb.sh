@@ -16,9 +16,11 @@ apt-get -y install python3 python3-coverage
 apt-get -y install python3-pil
 # pip dependencies (for dependencies not available as DEB)
 apt-get -y install gcc libx11-dev libxtst-dev python3-dev libpng-dev python3-pip
+echo check
 apt-get -y install python3.12-venv
 python3 -m venv .venv
 source .venv/bin/activate
+which python
 pip3 install --upgrade pip
 pip3 install setuptools-rust
 apt-get -y install python3-numpy
@@ -36,7 +38,7 @@ else
     # pip3 install pytesseract==0.3.4 tesserocr==2.5.1
     pip3 install pytesseract==0.3.10 tesserocr==2.7.0
     echo check
-    pip3 show torcpytesseracth tesserocr
+    pip3 show pytesseract tesserocr
 fi
 # deep learning
 # pip3 install torch==1.8.1 torchvision==0.9.1
