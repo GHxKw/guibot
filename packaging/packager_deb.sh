@@ -22,8 +22,6 @@ source .venv/bin/activate
 pip3 install --upgrade pip
 pip3 install setuptools-rust
 apt-get -y install python3-numpy
-echo check
-pip3 list
 if [[ $distro_version == "xenial" ]]; then
     export DISABLE_OPENCV=1
 else
@@ -37,8 +35,6 @@ else
     apt-get -y install g++ pkg-config
     # pip3 install pytesseract==0.3.4 tesserocr==2.5.1
     pip3 install pytesseract==0.3.10 tesserocr==2.7.0
-    echo check
-    pip3 show pytesseract tesserocr
 fi
 # deep learning
 # pip3 install torch==1.8.1 torchvision==0.9.1
@@ -54,8 +50,7 @@ apt-get -y install python3-tk scrot
 pip3 install pyscreeze==0.1.28
 pip3 install pyautogui==0.9.53
 echo check
-which python
-pip3 show pyautogui
+pip3 list
 apt-get -y install x11vnc
 # deb packaging and installing of current guibot source
 apt-get -y install dh-make dh-python debhelper python3-all devscripts
