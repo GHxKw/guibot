@@ -22,6 +22,8 @@ source .venv/bin/activate
 pip3 install --upgrade pip
 pip3 install setuptools-rust
 apt-get -y install python3-numpy
+echo check
+pip3 list
 if [[ $distro_version == "xenial" ]]; then
     export DISABLE_OPENCV=1
 else
