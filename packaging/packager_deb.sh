@@ -16,6 +16,9 @@ apt-get -y install python3 python3-coverage
 apt-get -y install python3-pil
 # pip dependencies (for dependencies not available as DEB)
 apt-get -y install gcc libx11-dev libxtst-dev python3-dev libpng-dev python3-pip
+apt-get -y install python3-virtualenv
+virtualenv .venv
+source .venv/bin/activate
 pip3 install --upgrade pip
 pip3 install setuptools-rust
 apt-get -y install python3-numpy
@@ -52,8 +55,6 @@ echo check
 which python
 pip3 show pyautogui
 apt-get -y install x11vnc
-
-
 # deb packaging and installing of current guibot source
 apt-get -y install dh-make dh-python debhelper python3-all devscripts
 NAME=$(sed -n 's/^Package:[ \t]*//p' "$distro_root/guibot/packaging/debian/control")
@@ -65,8 +66,6 @@ debuild --no-tgz-check --no-lintian -i -us -uc -b
 cp ../${NAME}_${VERSION}*.deb "$distro_root/guibot"
 apt-get -y install "$distro_root/guibot/"${NAME}_${VERSION}*.deb
 rm -fr "$distro_root/$NAME-$VERSION"
-
-
 # virtual display
 apt-get -y install xvfb vim-common
 export DISPLAY=:99.0
