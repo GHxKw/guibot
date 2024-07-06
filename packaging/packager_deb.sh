@@ -6,8 +6,9 @@ readonly distro_version="${VERSION:-xenial}"
 readonly distro_root="${ROOT:-$HOME}"
 
 activate_virtualenv() {
-    echo "Activating virtual environment at: $distro_root/myVenv/bin/activate"
-    source "$distro_root/myVenv/bin/activate"
+    echo "$HOME"
+    echo "Activating virtual environment at: $distro_root/guibot/myVenv/bin/activate"
+    source "$distro_root/guibot/myVenv/bin/activate"
 }
 
 # deb dependencies
