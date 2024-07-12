@@ -70,7 +70,6 @@ VERSION=${CHANGELOG_REVS[0]}
 cp -r "$distro_root/guibot" "$distro_root/$NAME-$VERSION"
 
 cd "$distro_root/$NAME-$VERSION/packaging"
-activate_virtualenv
 debuild --no-tgz-check --no-lintian -i -us -uc -b
 
 cp ../${NAME}_${VERSION}*.deb "$distro_root/guibot"
@@ -92,7 +91,6 @@ mkdir /tmp/runtime-root
 chmod 0700 /tmp/runtime-root
 
 cd /usr/lib/python3/dist-packages/guibot/tests
-activate_virtualenv
 LIBPATH=".." COVERAGE="python3-coverage" sh coverage_analysis.sh
 
 exit 0
