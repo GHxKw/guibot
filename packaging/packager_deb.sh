@@ -6,6 +6,7 @@ readonly distro_version="${VERSION:-xenial}"
 readonly distro_root="${ROOT:-$HOME}"
 
 activate_virtualenv() {
+    echo "$pwd"
     echo "$USER"
     echo "$HOME"
     echo "${ROOT:-$HOME}"
