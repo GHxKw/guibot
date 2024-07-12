@@ -6,12 +6,9 @@ readonly distro_version="${VERSION:-xenial}"
 readonly distro_root="${ROOT:-$HOME}"
 
 activate_virtualenv() {
-    echo "$pwd"
-    echo "$USER"
-    echo "$HOME"
-    echo "${ROOT:-$HOME}"
-    echo "Activating virtual environment at: $distro_root/myVenv/bin/activate"
-    source "$distro_root/myVenv/bin/activate"
+    CURRENT_DIR=$(pwd)
+    echo "Activating virtual environment at: $CURRENT_DIR/myVenv/bin/activate"
+    source "$CURRENT_DIR/myVenv/bin/activate"
 }
 
 # deb dependencies
