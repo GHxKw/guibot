@@ -28,6 +28,7 @@ pip3 install pytesseract==0.3.10 tesserocr==2.7.0
 # testing
 pip3 install torch==2.2.0 torchvision==0.17.0
 # screen controlling
+pip3 install pyautogui==0.9.53
 if (( distro_version <= 32 )); then
     pip3 install setuptools-rust
     pip3 install autopy==4.0.0
@@ -38,14 +39,6 @@ pip3 install vncdotool==0.12.0
 dnf -y install xdotool xwd ImageMagick
 # NOTE: PyAutoGUI's scrot dependencies are broken on Fedora 33- so we don't support these
 dnf -y install python3-tkinter scrot
-# Verify scrot package
-if ! command -v scrot &> /dev/null; then
-    echo "Error: scrot could not be installed."
-    exit 1
-else
-    echo "scrot installed successfully."
-fi
-
 # TODO: install PyScreeze separately to replace the one PyAutoGUI will install which is incompatible with the current Pillow version
 pip3 install pyscreeze==0.1.28
 pip3 install pyautogui==0.9.53
